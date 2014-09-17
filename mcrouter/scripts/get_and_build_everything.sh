@@ -22,3 +22,5 @@ for script in $(ls "order_$ORDER/" | egrep '^[0-9]+_.*[^~]$' | sort -n); do
 done
 
 "$INSTALL_DIR/bin/mcrouter" --help
+
+[ $? - eq 3 ]
